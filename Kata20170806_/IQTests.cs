@@ -14,9 +14,15 @@ namespace Kata20170806_
         }
 
         [TestMethod]
-        public void input_1_2_1_should_return_1()
+        public void input_1_2_1_should_return_2()
         {
             IQTestShouldBe(2, "1 2 1");
+        }
+
+        [TestMethod]
+        public void input_1_2_2_should_return_1()
+        {
+            IQTestShouldBe(1, "1 2 2");
         }
 
         private static void IQTestShouldBe(int expected, string numbers)
@@ -32,7 +38,19 @@ namespace Kata20170806_
         public int Test(string numbers)
         {
             int[] numArray = numbers.Split(' ').Select(int.Parse).ToArray();
-            return Array.FindIndex(numArray, a => a % 2 == 0) + 1;
+
+
+            Predicate<int> predicate;
+            if (numArray.Count(a => a % 2 == 0) == 1)
+            {
+                predicate = a => a % 2 == 0;
+            }
+            else
+            {
+                predicate = a => a % 2 != 0;
+            }
+            
+            return Array.FindIndex(numArray, predicate) + 1;
         }
     }
 }
