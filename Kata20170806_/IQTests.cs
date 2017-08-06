@@ -43,19 +43,9 @@ namespace Kata20170806_
     {
         public int Test(string numbers)
         {
-            var numArray = numbers.Split(' ').Select(int.Parse).ToArray();
-
-            Predicate<int> predicate;
-            if (numArray.Count(a => a % 2 == 0) == 1)
-            {
-                predicate = a => a % 2 == 0;
-            }
-            else
-            {
-                predicate = a => a % 2 != 0;
-            }
-            
-            return Array.FindIndex(numArray, predicate) + 1;
+            var numArray = numbers.Split(' ').Select(int.Parse).ToList();
+            var num = numArray.GroupBy(a => a % 2).OrderBy(a => a.Count()).First().First();
+            return numArray.FindIndex(a => a == num) + 1;
         }
     }
 }
