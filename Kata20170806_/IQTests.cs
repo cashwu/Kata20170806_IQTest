@@ -25,6 +25,12 @@ namespace Kata20170806_
             IQTestShouldBe(1, "1 2 2");
         }
 
+        [TestMethod]
+        public void input_2_4_7_8_10_should_return_3()
+        {
+            IQTestShouldBe(3, "2 4 7 8 10");
+        }
+
         private static void IQTestShouldBe(int expected, string numbers)
         {
             var iq = new IQ();
@@ -37,8 +43,7 @@ namespace Kata20170806_
     {
         public int Test(string numbers)
         {
-            int[] numArray = numbers.Split(' ').Select(int.Parse).ToArray();
-
+            var numArray = numbers.Split(' ').Select(int.Parse).ToArray();
 
             Predicate<int> predicate;
             if (numArray.Count(a => a % 2 == 0) == 1)
