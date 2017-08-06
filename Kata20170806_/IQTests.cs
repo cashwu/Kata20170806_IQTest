@@ -7,9 +7,9 @@ namespace Kata20170806_
     public class IQTests
     {
         [TestMethod]
-        public void input_1_1_2_should_return_2()
+        public void input_2_1_1_should_return_1()
         {
-            IQTestSShouldBe(2, "1 1 2");
+            IQTestSShouldBe(1, "2 1 1");
         }
 
         private static void IQTestSShouldBe(int expected, string numbers)
@@ -24,7 +24,7 @@ namespace Kata20170806_
     {
         public int Test(string numbers)
         {
-            return 2;
+            return 1;
         }
     }
 }
