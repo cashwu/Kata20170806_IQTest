@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Kata20170806_
@@ -10,6 +11,12 @@ namespace Kata20170806_
         public void input_2_1_1_should_return_1()
         {
             IQTestShouldBe(1, "2 1 1");
+        }
+
+        [TestMethod]
+        public void input_1_2_1_should_return_1()
+        {
+            IQTestShouldBe(2, "1 2 1");
         }
 
         private static void IQTestShouldBe(int expected, string numbers)
@@ -24,7 +31,8 @@ namespace Kata20170806_
     {
         public int Test(string numbers)
         {
-            return 1;
+            int[] numArray = numbers.Split(' ').Select(int.Parse).ToArray();
+            return Array.FindIndex(numArray, a => a % 2 == 0) + 1;
         }
     }
 }
