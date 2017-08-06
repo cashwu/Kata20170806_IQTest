@@ -9,10 +9,10 @@ namespace Kata20170806_
         [TestMethod]
         public void input_2_1_1_should_return_1()
         {
-            IQTestSShouldBe(1, "2 1 1");
+            IQTestShouldBe(1, "2 1 1");
         }
 
-        private static void IQTestSShouldBe(int expected, string numbers)
+        private static void IQTestShouldBe(int expected, string numbers)
         {
             var iq = new IQ();
             var actual = iq.Test(numbers);
