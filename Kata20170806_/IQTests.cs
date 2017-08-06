@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Kata20170806_
 {
     [TestClass]
-    public class UnitTest1
+    public class IQTests
     {
         [TestMethod]
         public void TestMethod1()

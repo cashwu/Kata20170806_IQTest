@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26724.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata20170806_", "Kata20170806_\Kata20170806_.csproj", "{4B259795-9E65-4AAE-8E5F-FB727C504FAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata20170806_IQTest", "Kata20170806_\Kata20170806_IQTest.csproj", "{4B259795-9E65-4AAE-8E5F-FB727C504FAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,5 +21,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D75E4D0-FACD-4411-9FC5-ED56C6607AB6}
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 863ff9f5-b059-454a-bb6c-4b61237d0511
 	EndGlobalSection
 EndGlobal
